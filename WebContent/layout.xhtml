@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	lang="pt-br">
+
+	<head jsf:id="head">
+		<meta charset = "UTF-8"/>
+		<title>UDFitness</title>
+		<link rel="stylesheet" type="text/css" href="css/UDFitness_Estilo.css"/>
+	</head>
+	
+	<body>
+	<!-- Cabeçalho Início -->
+		<header>
+			<img src=""/>
+			<nav>
+				<div>
+					<a jsf:outcome ="dadosAluno">Novo Aluno</a><br/>
+					<a jsf:outcome="pesquisaDeAluno?clear=true">Pesquisa de Aluno</a><br/>
+					<a jsf:outcome="controleDeAcesso">Controle de Acesso</a><br/>
+					<a jsf:outcome="relatoriosDeEntradaSaida">Relatório de Entradas e Saídas</a><br/>
+					<a jsf:outcome="relatorioDeSituacoes?clear=true">Relatórios de Situações</a><br/>
+				
+				</div>
+			</nav>
+		</header>
+		
+		<h1>#{title}</h1>
+		
+		<h:panelGroup rendered="#{!facesContext.messageList.isEmpty()}">
+				<div id="infoMessage">
+					<h:messages/>
+				</div>
+		</h:panelGroup>
+	
+		<br />
+		
+	<!-- Cabeçalho Início -->
+	
+	<ui:insert name="conteudo"/>
+	</body>
+	
+
+</html>
